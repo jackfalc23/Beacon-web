@@ -9523,32 +9523,7 @@ const SEED_LENDERS = [
   ]},
 ];
 
-const SEED_DEVELOPERS = [
-  { id: "d_artisan", name: "Artisan Properties Ltd", type: "DEVELOPER", notes: "Cowichan Valley townhomes", staff: [] },
-  { id: "d_2300", name: "2300 Murrelet Corp.", type: "OWNER-BUILDER", notes: "Single-project SPE", staff: [] },
-  { id: "d_ahwinter", name: "AH Winter & Son Construction Ltd.", type: "BUILDER", notes: "GC + small developer, Comox Valley", staff: [] },
-  { id: "d_bayview", name: "Bayview Developments Inc.", type: "DEVELOPER", notes: "Selkirk Waterfront sponsor", staff: [
-    { id: "dc_001", name: "Marcus Bayview", title: "Managing Principal", email: "marcus@bayviewdev.ca", phone: "250-555-0188", notes: "Decision-maker on all draws" },
-    { id: "dc_002", name: "Jenny Tao", title: "Project Manager", email: "jenny.tao@bayviewdev.ca", phone: "", notes: "Day-to-day site contact" },
-  ]},
-  { id: "d_islandhealth", name: "Island Health", type: "INSTITUTION", notes: "", staff: [
-    { id: "dc_003", name: "Dr. M. Patel", title: "Capital Projects Director", email: "", phone: "", notes: "" },
-  ]},
-  { id: "d_westbrook", name: "Westbrook Holdings", type: "DEVELOPER", notes: "Langford projects", staff: [] },
-  { id: "d_pier9", name: "Pier 9 Developments", type: "DEVELOPER", notes: "Sidney waterfront mixed-use specialist", staff: [
-    { id: "dc_004", name: "Alex Romano", title: "Founder", email: "alex@pier9.dev", phone: "250-555-0211", notes: "" },
-  ]},
-  { id: "d_aragon", name: "Aragon Properties", type: "DEVELOPER", notes: "Vancouver-based mid- and high-rise developer", staff: [] },
-  { id: "d_mosaic", name: "Mosaic Homes", type: "DEVELOPER", notes: "Lower Mainland multi-family", staff: [] },
-  { id: "d_highstreet", name: "Highstreet Ventures", type: "DEVELOPER", notes: "Mid-island townhomes and rentals", staff: [] },
-  { id: "d_tannerridge", name: "Tanner Ridge Group", type: "DEVELOPER", notes: "Cowichan Valley & up-island", staff: [] },
-  { id: "d_cordovabay", name: "Cordova Bay Holdings", type: "DEVELOPER", notes: "Local family-office developer", staff: [] },
-  { id: "d_paccrest", name: "Pacific Crest Builders", type: "BUILDER", notes: "GC + small developer, Saanich Peninsula", staff: [] },
-  { id: "d_sunfield", name: "Sunfield Developments", type: "DEVELOPER", notes: "West Shore single-family and small multi", staff: [] },
-  { id: "d_camosun", name: "Camosun College", type: "INSTITUTION", notes: "", staff: [
-    { id: "dc_005", name: "Michel Turcotte", title: "Director, Facilities", email: "", phone: "", notes: "" },
-  ]},
-];
+const SEED_DEVELOPERS = [];
 
 const STATUS_COLORS = { ACTIVE: "var(--steel)", "ON HOLD": "#c98a3a", COMPLETED: "#5a8c6f", CANCELLED: "var(--sky)" };
 const STATUS_OPTIONS = ["ACTIVE", "ON HOLD", "COMPLETED", "CANCELLED"];
@@ -18920,110 +18895,7 @@ const SEED_DEVELOPERS = [
 const today = () => new Date().toISOString().slice(0, 10);
 const daysFromNow = (n) => { const d = new Date(); d.setDate(d.getDate() + n); return d.toISOString().slice(0, 10); };
 
-const SEED_LEADS = [
-  {
-    id: "L_0001", leadNumber: "L-0001",
-    projectName: "1234 Douglas St Mixed-Use Rezoning",
-    address: "1234 Douglas St", postcode: "V8W 2C3", municipality: "City of Victoria", region: "Capital Regional District",
-    lat: 48.4284, lng: -123.3656,
-    projectInfo: "12-storey mixed-use tower, ~140 residential units over ground-floor retail. Rezoning application to the Downtown Core Area Plan.",
-    permitNumber: "REZ00742", permitType: "REZONING", permitStatus: "UNDER REVIEW", applicationDate: "2026-03-02",
-    sourceName: "City of Victoria — DARP / Rezoning", sourceUrl: "https://www.victoria.ca/city-government/development-tracker",
-    stage: "TRACKING", estValue: 62000000, probability: 30,
-    owner: { name: "Douglas & View Holdings Ltd.", address: "Suite 400, 1175 Douglas St, Victoria, BC", postcode: "V8W 2E1" },
-    architect: { name: "D'Ambrosio Architecture", address: "532 Herald St, Victoria, BC", postcode: "V8W 1S6" },
-    developer: "Bayview Developments Inc.",
-    assignedTo: "Aidan Kelly", dateIdentified: daysFromNow(-21),
-    nextAction: "Call Marcus re: cost-plan opportunity ahead of public hearing", nextActionDate: daysFromNow(4),
-    notes: [{ id: "n1", text: "Spotted on the Victoria development tracker. Bayview is the listed applicant — favourited developer, so flagged for active tracking.", ts: Date.now() - 86400000 * 21 }],
-    needsEnrichment: false,
-  },
-  {
-    id: "L_0002", leadNumber: "L-0002",
-    projectName: "Royal Oak Drive Townhouse DP",
-    address: "4500 Royal Oak Dr", postcode: "V8X 4M5", municipality: "District of Saanich", region: "Capital Regional District",
-    lat: 48.483, lng: -123.4147,
-    projectInfo: "32-unit townhouse development. Development Permit + Variance for setbacks.",
-    permitNumber: "DPV-2026-118", permitType: "DEVELOPMENT PERMIT", permitStatus: "APPLIED", applicationDate: "2026-04-18",
-    sourceName: "District of Saanich — Development Tracker", sourceUrl: "https://www.saanich.ca/EN/main/community/community-planning/applications.html",
-    stage: "OPPORTUNITY", estValue: 18500000, probability: 15,
-    owner: { name: "Royal Oak Land Corp.", address: "", postcode: "" },
-    architect: { name: "Checkwitch Poiron Architects", address: "Nanaimo, BC", postcode: "" },
-    developer: "",
-    assignedTo: "Aidan Kelly", dateIdentified: daysFromNow(-6),
-    nextAction: "Qualify — identify owner & whether a QS is engaged", nextActionDate: daysFromNow(2),
-    notes: [],
-    needsEnrichment: false,
-  },
-  {
-    id: "L_0003", leadNumber: "L-0003",
-    projectName: "Langford City Centre Block C",
-    address: "2871 Jacklin Rd", postcode: "V9B 3X7", municipality: "City of Langford", region: "Capital Regional District",
-    lat: 48.4502, lng: -123.5092,
-    projectInfo: "Two residential towers (18 + 14 storeys) over a shared podium. ~310 units.",
-    permitNumber: "", permitType: "REZONING", permitStatus: "PUBLIC HEARING", applicationDate: "2026-01-20",
-    sourceName: "City of Langford — Applications", sourceUrl: "",
-    stage: "CHASING", estValue: 145000000, probability: 55,
-    owner: { name: "Jacklin Centre Developments", address: "", postcode: "" },
-    architect: { name: "", address: "", postcode: "" },
-    developer: "Highstreet Ventures",
-    assignedTo: "Aidan Kelly", dateIdentified: daysFromNow(-48),
-    nextAction: "Submit capability statement + fee proposal", nextActionDate: daysFromNow(-1),
-    notes: [{ id: "n2", text: "Met the PM at the UDI lunch. They don't have a QS locked in yet — real shot at this one.", ts: Date.now() - 86400000 * 9 }],
-    needsEnrichment: false,
-  },
-  {
-    id: "L_0004", leadNumber: "L-0004",
-    projectName: "Mount Pleasant Block (Vancouver)",
-    address: "175 W 2nd Ave", postcode: "V5Y 1B8", municipality: "Off-Island", region: "Metro Vancouver Regional District",
-    lat: 49.2682, lng: -123.1027,
-    projectInfo: "6-storey mixed-use. Off-Island, but the developer is on our watchlist so we track it.",
-    permitNumber: "", permitType: "DEVELOPMENT PERMIT", permitStatus: "UNDER REVIEW", applicationDate: "2026-02-10",
-    sourceName: "Referral / word of mouth", sourceUrl: "",
-    stage: "TRACKING", estValue: 33000000, probability: 25,
-    owner: { name: "", address: "", postcode: "" },
-    architect: { name: "", address: "", postcode: "" },
-    developer: "Aragon Properties",
-    assignedTo: "Aidan Kelly", dateIdentified: daysFromNow(-14),
-    nextAction: "Check in with Aragon on procurement timeline", nextActionDate: daysFromNow(11),
-    notes: [{ id: "n3", text: "Off-Island — only tracked because Aragon is favourited. Worth a relationship touch.", ts: Date.now() - 86400000 * 14 }],
-    needsEnrichment: false,
-  },
-  {
-    id: "L_0005", leadNumber: "L-0005",
-    projectName: "Sidney Seaport Phase 2",
-    address: "9800 Seaport Pl", postcode: "V8L 4X3", municipality: "Town of Sidney", region: "Capital Regional District",
-    lat: 48.6529, lng: -123.3956,
-    projectInfo: "Waterfront mixed-use, phase 2. ~40 units + commercial.",
-    permitNumber: "DP-2025-204", permitType: "DEVELOPMENT PERMIT", permitStatus: "APPROVED", applicationDate: "2025-11-05",
-    sourceName: "Pasted URL", sourceUrl: "https://www.sidney.ca/your-government/applications",
-    stage: "WON", estValue: 27500000, probability: 100,
-    owner: { name: "Pier 9 Seaport Corp.", address: "", postcode: "" },
-    architect: { name: "Low Hammond Rowe Architects", address: "Victoria, BC", postcode: "" },
-    developer: "Pier 9 Developments",
-    assignedTo: "Aidan Kelly", dateIdentified: daysFromNow(-95),
-    nextAction: "", nextActionDate: "",
-    notes: [{ id: "n4", text: "Won the cost-planning engagement. Moved out of the pursuit pipeline.", ts: Date.now() - 86400000 * 30 }],
-    needsEnrichment: false,
-  },
-  {
-    id: "L_0006", leadNumber: "L-0006",
-    projectName: "Esquimalt Road Rental Apartments",
-    address: "1200 Esquimalt Rd", postcode: "V9A 3N8", municipality: "Township of Esquimalt", region: "Capital Regional District",
-    lat: 48.4318, lng: -123.414,
-    projectInfo: "Purpose-built rental, ~80 units. Heard the GC already has their cost consultant.",
-    permitNumber: "", permitType: "REZONING", permitStatus: "UNKNOWN", applicationDate: "",
-    sourceName: "Other", sourceUrl: "",
-    stage: "LOST", estValue: 24000000, probability: 0,
-    owner: { name: "", address: "", postcode: "" },
-    architect: { name: "", address: "", postcode: "" },
-    developer: "",
-    assignedTo: "Aidan Kelly", dateIdentified: daysFromNow(-40),
-    nextAction: "", nextActionDate: "",
-    notes: [{ id: "n5", text: "Cost consultant already engaged by the developer. Marked lost — revisit if a future phase comes up.", ts: Date.now() - 86400000 * 12 }],
-    needsEnrichment: false,
-  },
-];
+const SEED_LEADS = [];
 
 // ── Formatting helpers (shared visual language with the project tracker) ──
 const fmtCurrency = (n) => { const v = parseFloat(n) || 0; if (v === 0) return "—"; if (v >= 1_000_000) return `$${(v / 1_000_000).toFixed(1)}M`; if (v >= 1_000) return `$${(v / 1_000).toFixed(0)}K`; return `$${v.toFixed(0)}`; };
